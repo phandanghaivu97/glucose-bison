@@ -1,7 +1,10 @@
-import { Controller } from "@hotwired/stimulus"
+import { Controller } from "stimulus"
 
-// Connects to data-controller="home"
 export default class extends Controller {
-  connect() {
+  static targets = ["name"]
+
+  index() {
+    // Your logic here, e.g., alert the name
+    alert(`Hello, ${this.nameTarget.value}!`);
   }
 }
